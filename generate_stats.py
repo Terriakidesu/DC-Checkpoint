@@ -132,7 +132,8 @@ def generate():
         print(
             f"Progress [{index:{folder_count_str_len}d}/{folder_count:0{folder_count_str_len}d}] : {percent:0.2%}")
 
-    print(f"Finished analyzing {folder_count:{folder_count_str_len}d} folders...")
+    print(
+        f"Finished analyzing {folder_count:{folder_count_str_len}d} folders...")
 
     print("Writing `stats.json`...")
     with open("stats.json", "w") as f:
