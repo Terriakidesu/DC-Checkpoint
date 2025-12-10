@@ -41,7 +41,7 @@ def get_messages() -> Generator[tuple[Channel, list[Message]]]:
         yield channel, messages
 
 
-def main():
+def generate():
 
     emoji_regex = re.compile(r':[^:\s]+:', re.I)
     dc_emote_regex = re.compile(r'<a?:\w+:\d+>', re.I)
@@ -116,4 +116,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    generate()
