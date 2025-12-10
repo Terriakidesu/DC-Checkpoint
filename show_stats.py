@@ -28,7 +28,7 @@ Favorite Emoji: {top_emojis[0]}
     for i in range(5):
         emote = top_emojis[i]
 
-        if emo := emoji.emojize(emote):
+        if emo := emoji.get_emoji_by_name(emote):
             print(f"#{i+1} {emo}")
 
         else:
