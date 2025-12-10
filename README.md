@@ -8,11 +8,11 @@ Using requested data from discord to create the your checkpoint
 > [!IMPORTANT]
 > Keep the zip's file structure
 > ```
-> package
-> ⊢ Messages/
-> ∣    ⊢ c1234567890/
-> ∣    ∣     ⊢ channel.json
-> ∣    ∣     ⨽ messages.json
-> ∣    ⊢ c1234567891/
-> ...
+>   package
+>   ⊢ Messages/
+>   ∣    ⊢ c1234567890/
+>   ∣    ∣     ⊢ channel.json
+>   ∣    ∣     ⨽ messages.json
+>   ∣    ⊢ c1234567891/
+>   ...
 > ```
