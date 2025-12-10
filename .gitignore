@@ -1,0 +1,6 @@
+.venv
+__pycache__
+assets/
+package/
+*.zip
+*.json
