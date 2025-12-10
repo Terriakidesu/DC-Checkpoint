@@ -16,3 +16,8 @@ Using requested data from discord to create the your checkpoint
 >   ∣    ⊢ c1234567891/
 >   ...
 > ```
+
+Just run
+```bash
+python main.py
+```
