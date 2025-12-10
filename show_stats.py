@@ -3,7 +3,7 @@ import json
 from typing import Any
 
 
-def main():
+def show():
     with open("stats.json", "r", encoding="utf-8") as f:
         data: dict[str, dict[str, Any]] = json.load(f)
 
@@ -36,4 +36,4 @@ Favorite Emoji: {top_emojis[0]}
         print(f"#{i+1} {top_emojis[i]}")
 
 if __name__ == "__main__":
-    main()
+    show()
