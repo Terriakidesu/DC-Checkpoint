@@ -1,4 +1,5 @@
 import json
+import emoji
 
 from typing import Any
 
@@ -25,7 +26,13 @@ Favorite Emoji: {top_emojis[0]}
 
     print("Top Emojis:")
     for i in range(5):
-        print(f"#{i+1} {top_emojis[i]}")
+        emote = top_emojis[i]
+
+        if emo := emoji.emojize(emote):
+            print(f"#{i+1} {emo}")
+
+        else:
+            print(f"#{i+1} {top_emojis[i]}")
 
 
 if __name__ == "__main__":
