@@ -61,9 +61,21 @@ def generate():
         }
     }
 
+    folder_count = len(list(get_messages_path()))
+    folder_count_str = f"{folder_count}"
+    folder_count_str_len = len(folder_count_str)
+
+    index = 0
+
     for channel, messages in get_messages():
 
         if channel.guild is None:
+            index += 1
+
+            percent = (index) / folder_count
+
+            print(
+                f"Progress [{index:{folder_count_str_len}d}/{folder_count:0{folder_count_str_len}d}] : {percent:0.2%}")
             continue
 
         stats["messages"]["total_count"] += len(messages)
@@ -111,6 +123,14 @@ def generate():
                     else:
                         stats["emotes"][emoji_name] = 1
 
+        index += 1
+
+        percent = (index) / folder_count
+
+        print(
+            f"Progress [{index:{folder_count_str_len}d}/{folder_count:0{folder_count_str_len}d}] : {percent:0.2%}")
+
+    print("Writing `stats.json`...")
     with open("stats.json", "w") as f:
         json.dump(stats, f, indent=4)
 
